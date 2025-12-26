@@ -3,7 +3,23 @@
  * Funcionalidades: Menu mobile, Acordeão FAQ, Header scroll
  */
 
+// ===== CONFIGURAÇÃO DO WHATSAPP =====
+// Substitua 'SEUNUMERO' pelo número real quando disponível
+const WHATSAPP_NUMBER = 'SEUNUMERO';
+const WHATSAPP_BASE_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=`;
+const WHATSAPP_DEFAULT_MESSAGE = encodeURIComponent('Oi VivaDF, quero tirar dúvidas sobre Doença Falciforme');
+
 document.addEventListener('DOMContentLoaded', function () {
+    // ===== Atualizar todos os links do WhatsApp =====
+    const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+    whatsappLinks.forEach(function (link) {
+        // Preserva a mensagem personalizada se existir, senão usa padrão
+        const currentHref = link.getAttribute('href');
+        const textMatch = currentHref.match(/text=([^&]*)/);
+        const message = textMatch ? textMatch[1] : WHATSAPP_DEFAULT_MESSAGE;
+        link.setAttribute('href', WHATSAPP_BASE_URL + message);
+    });
+
     // ===== Menu Mobile Toggle =====
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.nav');
@@ -140,6 +156,33 @@ document.addEventListener('DOMContentLoaded', function () {
             // Permite o comportamento padrão para links
         });
     });
+
+    // ===== Carregar Logos de Parceiros Dinamicamente =====
+    const parceirosContainer = document.getElementById('parceiros-logos');
+
+    if (parceirosContainer) {
+        // Lista de logos de parceiros (SVG)
+        // Adicione os nomes dos arquivos SVG na pasta src/parceiros/
+        const parceirosLogos = [
+            // 'parceiro1.svg',
+            // 'parceiro2.svg',
+            // Adicione mais logos conforme necessário
+        ];
+
+        if (parceirosLogos.length === 0) {
+            // Mensagem quando não há parceiros
+            parceirosContainer.innerHTML = '<p class="parceiros-empty">Em breve, nossos parceiros estarão aqui.</p>';
+        } else {
+            parceirosLogos.forEach(function (logo) {
+                const img = document.createElement('img');
+                img.src = 'src/parceiros/' + logo;
+                img.alt = 'Logo de parceiro';
+                img.className = 'parceiro-logo';
+                img.loading = 'lazy';
+                parceirosContainer.appendChild(img);
+            });
+        }
+    }
 });
 
 // ===== CSS para animações de entrada (injetado via JS) =====
