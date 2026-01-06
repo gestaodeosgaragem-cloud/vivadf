@@ -460,6 +460,36 @@ button {
     font-weight: 600;
 }
 
+/* Card clicável (link) */
+.card-link {
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    transition: all var(--transition);
+}
+
+.card-link:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    background: var(--color-cta);
+    border-color: var(--color-cta);
+}
+
+.card-link:hover h4,
+.card-link:hover .card-icon-small {
+    color: var(--color-white);
+}
+
+.card-link:focus {
+    outline: 3px solid var(--color-cta);
+    outline-offset: 2px;
+}
+
+.card-link h4,
+.card-link .card-icon-small {
+    transition: color var(--transition);
+}
+
 /* ===== Highlight Box ===== */
 .highlight-box {
     background: var(--color-cta-light);
