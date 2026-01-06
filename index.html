@@ -2,574 +2,576 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="VivaDF — Informação clara, acolhimento e orientação para quem convive com a Doença Falciforme.">
-    <meta name="theme-color" content="#7A1E2B">
-    <title>VivaDF — Você pode viver bem com Doença Falciforme</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="VivaDF — Informação clara, acolhimento e orientação para quem convive com a Doença Falciforme.">
+  <meta name="theme-color" content="#7A1E2B">
+  <title>VivaDF — Você pode viver bem com Doença Falciforme</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- ========== HEADER STICKY ========== -->
-    <header id="top" class="header">
-        <div class="header-container">
-            <a href="#hero" class="logo">
-                <img src="src/logo.svg" alt="VivaDF" height="40">
+  <!-- ========== HEADER STICKY ========== -->
+  <header id="top" class="header">
+    <div class="header-container">
+      <a href="#hero" class="logo">
+        <img src="src/logo.svg" alt="VivaDF" height="40">
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" role="navigation">
+        <ul class="nav-list">
+          <li><a href="#autoridade">O que é</a></li>
+          <li><a href="#viver-bem">Viver bem</a></li>
+          <li><a href="#cuidados">Cuidados</a></li>
+          <li><a href="#assistencia">Seu Assistente Virtual</a></li>
+          <li><a href="#alerta">Sinais de alerta</a></li>
+          <li><a href="#faq">Perguntas</a></li>
+        </ul>
+
+        <a href="https://wa.me/0"
+          data-wa-text="Oi VivaDF, quero tirar dúvidas sobre Doença Falciforme"
+          class="btn btn-primary btn-header" target="_blank" rel="noopener noreferrer"
+          aria-label="Conversar no WhatsApp">
+          Conversar no WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section id="hero" class="hero">
+      <div class="container hero-wrapper">
+        <div class="hero-content">
+          <h1>VivaDF — Você pode viver bem</h1>
+          <p class="hero-subtitle">Informação clara, acolhimento e orientação para quem convive com a Doença
+            Falciforme — e para quem quer entender melhor.</p>
+          <p class="hero-text">Viver bem não é "sorte". É cuidado, acompanhamento e escolhas simples no dia a dia.
+            <strong>Você não está sozinho.</strong>
+          </p>
+
+          <div class="hero-cta">
+            <a href="https://wa.me/0"
+              data-wa-text="Oi VivaDF, quero tirar dúvidas sobre Doença Falciforme"
+              class="btn btn-cta btn-large" target="_blank" rel="noopener noreferrer"
+              aria-label="Conversar no WhatsApp">
+              Conversar no WhatsApp
             </a>
+            <a href="#o-que-e" class="btn btn-secondary">Entender a Doença Falciforme</a>
+          </div>
 
-            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+          <p class="microcopy">Orientações gerais e educativas. Em caso de sintomas importantes, procure
+            atendimento.</p>
+        </div>
+
+        <div class="hero-image">
+          <img src="src/picture.png" alt="" loading="eager">
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== AUTORIDADE ========== -->
+    <section id="autoridade" class="section section-white">
+      <div class="container">
+        <h2>Doença Falciforme: comum, genética e tratável</h2>
+        <p class="section-intro">A Doença Falciforme é uma condição genética do sangue e está entre as doenças
+          raras mais frequentes. Com diagnóstico precoce, acompanhamento e prevenção, dá para reduzir crises,
+          evitar complicações e viver com mais segurança.</p>
+
+        <div class="cards-grid cards-3">
+          <article class="card">
+            <div class="card-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" />
+                <path d="M14 20h12M20 14v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Genética, mas não contagiosa</h3>
+            <p>Não se pega. É herdada.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <path d="M20 8v24M12 16l8-8 8 8M12 24l8 8 8-8" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Acompanhamento muda tudo</h3>
+            <p>Rotina de cuidados reduz crises.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <path d="M20 36c8.837 0 16-7.163 16-16S28.837 4 20 4 4 11.163 4 20s7.163 16 16 16z"
+                  stroke="currentColor" stroke-width="2" />
+                <path d="M14 20l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Você pode viver bem</h3>
+            <p>Com plano de cuidado e apoio.</p>
+          </article>
+        </div>
+
+        <div class="cta-contextual">
+          <a href="https://wa.me/0"
+            data-wa-text="Quero saber mais sobre Doença Falciforme"
+            class="btn btn-cta" target="_blank" rel="noopener noreferrer">
+            Saiba mais sobre a Doença Falciforme
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== O QUE É ========== -->
+    <section id="o-que-e" class="section">
+      <div class="container">
+        <h2>O que é Doença Falciforme?</h2>
+        <p class="section-text">Na Doença Falciforme, parte das células do sangue pode mudar de formato e
+          circular com mais dificuldade. Isso pode reduzir o transporte de oxigênio e, em alguns momentos,
+          causar bloqueios em vasos menores — o que gera dor e outros sintomas.</p>
+
+        <div class="highlight-box">
+          <h3>Traço x Doença</h3>
+          <ul>
+            <li><strong>Traço falciforme:</strong> geralmente não causa sintomas como a doença, mas pode ser
+              transmitido.</li>
+            <li><strong>Doença falciforme:</strong> ocorre quando a pessoa herda a alteração genética dos
+              dois lados da família.</li>
+          </ul>
+        </div>
+
+        <p class="section-closing">Entender como o seu corpo funciona é o primeiro passo para viver melhor com a
+          condição.</p>
+
+        <div class="cta-contextual">
+          <a href="https://wa.me/0"
+            data-wa-text="Quero saber mais sobre as Manifestações"
+            class="btn btn-cta" target="_blank" rel="noopener noreferrer">
+            Saiba mais sobre as Manifestações
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MANIFESTAÇÕES ========== -->
+    <section id="manifestacoes" class="section section-white">
+      <div class="container">
+        <h2>Como a Doença Falciforme pode se manifestar</h2>
+        <p class="section-intro">Cada pessoa vive a condição de um jeito. Algumas têm poucas crises; outras
+          precisam de mais suporte. O importante é ter acompanhamento e reconhecer sinais.</p>
+
+        <ul class="bullet-list">
+          <li>Episódios de dor (crises)</li>
+          <li>Cansaço/anemia</li>
+          <li>Infecções mais frequentes</li>
+          <li>Icterícia (olhos/pele amarelados) em alguns casos</li>
+          <li>Inchaço doloroso em mãos/pés na infância (em alguns casos)</li>
+        </ul>
+
+        <p class="microcopy-inline">Você não precisa "aguentar no limite". Dor forte merece atenção.</p>
+
+        <div class="cta-contextual">
+          <a href="https://wa.me/0"
+            data-wa-text="Quero saber mais sobre Viver Bem"
+            class="btn btn-cta" target="_blank" rel="noopener noreferrer">
+            Saiba mais sobre Viver Bem
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== VIVER BEM ========== -->
+    <section id="viver-bem" class="section">
+      <div class="container">
+        <h2>Você pode viver bem com Doença Falciforme</h2>
+        <p class="section-intro">Viver bem não significa "nunca ter desafios". Significa ter estratégias, apoio
+          e um plano. Com cuidado contínuo, muitas pessoas estudam, trabalham, viajam, praticam atividades
+          físicas com orientação e constroem uma vida completa.</p>
+
+        <div class="manifesto">
+          <p>Você é maior do que a condição.</p>
+          <p>Informação reduz medo.</p>
+          <p>Cuidado consistente constrói liberdade.</p>
+        </div>
+
+        <h3 class="cards-title">O que ajuda de verdade</h3>
+        <div class="cards-grid cards-4">
+          <article class="card card-small">
+            <div class="card-icon-small">💧</div>
+            <h4>Rotina de hidratação</h4>
+          </article>
+          <article class="card card-small">
+            <div class="card-icon-small">🌙</div>
+            <h4>Sono e recuperação</h4>
+          </article>
+          <article class="card card-small">
+            <div class="card-icon-small">📋</div>
+            <h4>Acompanhamento e exames</h4>
+          </article>
+          <article class="card card-small">
+            <div class="card-icon-small">🤝</div>
+            <h4>Rede de apoio e saúde emocional</h4>
+          </article>
+        </div>
+
+        <div class="cta-contextual">
+          <a href="https://wa.me/0"
+            data-wa-text="Quero saber mais sobre Cuidados"
+            class="btn btn-cta" target="_blank" rel="noopener noreferrer">
+            Conheça o seu plano de cuidados
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CUIDADOS ========== -->
+    <section id="cuidados" class="section section-white">
+      <div class="container">
+        <h2>Cuidados simples que ajudam muito</h2>
+        <p class="section-intro">Pequenos hábitos têm grande impacto. Nada aqui é sobre "parar de viver" — é
+          sobre viver com mais segurança.</p>
+
+        <ul class="checklist">
+          <li><span class="check-icon" aria-hidden="true">✓</span>Hidrate-se ao longo do dia</li>
+          <li><span class="check-icon" aria-hidden="true">✓</span>Evite extremos de frio/calor quando possível</li>
+          <li><span class="check-icon" aria-hidden="true">✓</span>Vacinas e prevenção de infecções em dia</li>
+          <li><span class="check-icon" aria-hidden="true">✓</span>Alimentação equilibrada e rotina saudável</li>
+          <li><span class="check-icon" aria-hidden="true">✓</span>Atividade física com orientação (moderada, respeitando o corpo)</li>
+          <li><span class="check-icon" aria-hidden="true">✓</span>Acompanhamento regular e plano de ação para crises</li>
+        </ul>
+
+        <div class="cta-contextual">
+          <a href="https://wa.me/0"
+            data-wa-text="Quero um plano de cuidados"
+            class="btn btn-cta" target="_blank" rel="noopener noreferrer"
+            aria-label="Quero um plano de cuidados no WhatsApp">
+            Quero um plano de cuidados no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ASSISTÊNCIA ========== -->
+    <section id="assistencia" class="section">
+      <div class="container">
+        <h2>Sua assistente digital para o dia a dia</h2>
+        <p class="section-intro">O VivaDF é mais do que informação — é um apoio constante. Nossa assistente por
+          WhatsApp ajuda você a navegar sua rotina com a Doença Falciforme, oferecendo orientação prática e
+          acolhimento sempre que precisar, 100% gratuito.</p>
+
+        <div class="cards-grid cards-3">
+          <article class="card">
+            <div class="card-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <path d="M20 4C11.163 4 4 11.163 4 20s7.163 16 16 16 16-7.163 16-16S28.837 4 20 4z"
+                  stroke="currentColor" stroke-width="2" />
+                <path d="M12 20l6-6v4h10v4H18v4l-6-6z" fill="currentColor" />
+              </svg>
+            </div>
+            <h3>Localização de hospitais</h3>
+            <p>Encontre centros de referência e hospitais próximos preparados para atender DF.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <rect x="6" y="8" width="28" height="24" rx="3" stroke="currentColor" stroke-width="2" />
+                <path d="M6 16h28M14 8v-4M26 8v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Diário de crises e lembretes</h3>
+            <p>Registre episódios, acompanhe padrões e receba lembretes de medicação e hidratação.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <path d="M20 36c8.837 0 16-7.163 16-16S28.837 4 20 4 4 11.163 4 20s7.163 16 16 16z"
+                  stroke="currentColor" stroke-width="2" />
+                <path d="M20 12v10l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>S.O.S Emergência</h3>
+            <p>Protocolo de urgência guiado por dor e orientação imediata em momentos críticos.</p>
+          </article>
+        </div>
+
+        <div class="cards-grid cards-4" style="margin-top: var(--spacing-lg);">
+          <article class="card card-small">
+            <div class="card-icon-small">📚</div>
+            <h4>Conteúdo educacional</h4>
+          </article>
+          <article class="card card-small">
+            <div class="card-icon-small">💚</div>
+            <h4>Suporte emocional</h4>
+          </article>
+          <article class="card card-small">
+            <div class="card-icon-small">⚖️</div>
+            <h4>Direitos do paciente</h4>
+          </article>
+          <article class="card card-small">
+            <div class="card-icon-small">🩺</div>
+            <h4>Rede de especialistas</h4>
+          </article>
+        </div>
+
+        <div class="manifesto" style="margin-top: var(--spacing-xl);">
+          <p>Acolhimento 24h gratuito. Informação confiável. Apoio real.</p>
+        </div>
+
+        <div class="cta-contextual">
+          <a href="https://wa.me/0"
+            data-wa-text="Quero conhecer a assistência"
+            class="btn btn-cta btn-large" target="_blank" rel="noopener noreferrer"
+            aria-label="Conversar com a assistente">
+            Conversar com a assistente
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ALERTA ========== -->
+    <section id="alerta" class="section section-alert">
+      <div class="container">
+        <h2>Quando procurar atendimento imediatamente</h2>
+        <p class="section-intro">Alguns sinais pedem avaliação rápida. Sua segurança deve estar em primeiro
+          lugar. Estes são os principais sinais de alerta para procurar atendimento:</p>
+
+        <ul class="alert-list">
+          <li>Febre</li>
+          <li>Dor intensa fora do seu padrão ou que não melhora</li>
+          <li>Falta de ar, dor no peito, desmaio</li>
+          <li>Fraqueza súbita, alteração neurológica, confusão</li>
+          <li>Qualquer sintoma que te assuste</li>
+        </ul>
+
+        <p class="support-phrase">Você não está exagerando. Procurar ajuda cedo é cuidado.</p>
+
+        <div class="cta-contextual">
+          <a href="https://wa.me/0"
+            data-wa-text="Quero saber mais sobre Sinais de Alerta"
+            class="btn btn-cta" target="_blank" rel="noopener noreferrer">
+            Saiba mais sobre Sinais de Alerta
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TRATAMENTO ========== -->
+    <section id="tratamento" class="section section-white">
+      <div class="container">
+        <h2>O tratamento é individual — e funciona melhor com constância</h2>
+        <p class="section-text">O cuidado pode incluir acompanhamento especializado, prevenção, controle de
+          sintomas e, em alguns casos, medicamentos e outros recursos definidos pela equipe de saúde. O melhor
+          caminho é ter um plano claro e revisá-lo ao longo do tempo.</p>
+        <p class="section-subtext">Cada pessoa tem uma história e um plano. O que importa é não caminhar
+          sozinho.</p>
+
+        <div class="cta-contextual">
+          <a href="https://wa.me/0"
+            data-wa-text="Quero saber mais sobre Tratamento"
+            class="btn btn-cta" target="_blank" rel="noopener noreferrer">
+            Saiba mais sobre Tratamento
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== VIDA REAL ========== -->
+    <section id="vida-real" class="section">
+      <div class="container">
+        <h2>Vida real com Doença Falciforme</h2>
+
+        <div class="testimonial-grid">
+          <blockquote class="testimonial-card">
+            <p>"Aprendi a reconhecer meus sinais e agir cedo."</p>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p>"Com rotina e apoio, minha vida segue."</p>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p>"Eu me cuido — e continuo vivendo meus planos."</p>
+          </blockquote>
+        </div>
+
+        <div class="cta-contextual">
+          <a href="https://wa.me/0"
+            data-wa-text="Quero compartilhar minha história"
+            class="btn btn-cta" target="_blank" rel="noopener noreferrer">
+            Saiba mais sobre Vida Real
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section id="faq" class="section section-white">
+      <div class="container">
+        <h2>Perguntas frequentes</h2>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>Doença Falciforme é contagiosa?</span>
+              <span class="accordion-icon" aria-hidden="true"></span>
             </button>
+            <div class="accordion-content">
+              <p>Não. A Doença Falciforme é uma condição genética, herdada dos pais. Não é transmitida por
+                contato, ar, água ou qualquer outro meio.</p>
+            </div>
+          </div>
 
-            <nav class="nav" role="navigation">
-                <ul class="nav-list">
-                    <li><a href="#autoridade">O que é</a></li>
-                    <li><a href="#viver-bem">Viver bem</a></li>
-                    <li><a href="#cuidados">Cuidados</a></li>
-                    <li><a href="#assistencia">Seu Assistente Virtual</a></li>
-                    <li><a href="#alerta">Sinais de alerta</a></li>
-                    <li><a href="#faq">Perguntas</a></li>
-                </ul>
-                <a href="https://wa.me/SEUNUMERO?text=Oi%20VivaDF%2C%20quero%20tirar%20d%C3%BAvidas%20sobre%20Doen%C3%A7a%20Falciforme"
-                    class="btn btn-primary btn-header" target="_blank" rel="noopener noreferrer"
-                    aria-label="Conversar no WhatsApp">
-                    Conversar no WhatsApp
-                </a>
-            </nav>
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>O que pode desencadear uma crise?</span>
+              <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <p>Alguns fatores que podem contribuir: desidratação, temperaturas extremas (frio ou calor
+                intenso), infecções, estresse físico ou emocional intenso, e esforço físico excessivo
+                sem preparo. Cada pessoa pode ter gatilhos diferentes — conhecer os seus ajuda a
+                prevenir.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>Posso fazer exercício físico?</span>
+              <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <p>Sim, atividade física pode fazer parte da rotina, desde que seja adequada à sua condição
+                e com orientação profissional. Exercícios moderados, boa hidratação e respeitar os
+                limites do corpo são fundamentais. Converse com sua equipe de saúde para um plano
+                personalizado.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>Como lidar com a dor no dia a dia?</span>
+              <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <p>Ter um plano de manejo de dor com sua equipe de saúde é essencial. Isso pode incluir
+                identificar sinais precoces, saber quando usar medicações prescritas, aplicar calor
+                local, manter-se hidratado e reconhecer quando buscar atendimento. O chatbot orienta com
+                informação educativa e apoio. Para decisões clínicas e emergências, procure sua equipe
+                de saúde ou atendimento.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>Como explicar a condição para família/trabalho?</span>
+              <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <p>Ser claro e objetivo ajuda. Você pode explicar que é uma condição genética do sangue que
+                requer alguns cuidados, e que com acompanhamento você leva uma vida normal. Definir o
+                que você precisa (pausas, hidratação, flexibilidade em alguns dias) facilita a
+                compreensão dos outros.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span>O que o chatbot pode me ajudar a entender?</span>
+              <span class="accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="accordion-content">
+              <p>O chatbot orienta com informação educativa e apoio. Pode ajudar a tirar dúvidas gerais
+                sobre a condição, cuidados do dia a dia, quando buscar atendimento, e organizar
+                informações. Para decisões clínicas e emergências, procure sua equipe de saúde ou
+                atendimento.</p>
+            </div>
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <!-- ========== HERO ========== -->
-        <section id="hero" class="hero">
-            <div class="container hero-wrapper">
-                <div class="hero-content">
-                    <h1>VivaDF — Você pode viver bem</h1>
-                    <p class="hero-subtitle">Informação clara, acolhimento e orientação para quem convive com a Doença
-                        Falciforme — e para quem quer entender melhor.</p>
-                    <p class="hero-text">Viver bem não é "sorte". É cuidado, acompanhamento e escolhas simples no dia a
-                        dia.
-                        <strong>Você não está sozinho.</strong>
-                    </p>
-
-                    <div class="hero-cta">
-                        <a href="https://wa.me/SEUNUMERO?text=Oi%20VivaDF%2C%20quero%20tirar%20d%C3%BAvidas%20sobre%20Doen%C3%A7a%20Falciforme"
-                            class="btn btn-cta btn-large" target="_blank" rel="noopener noreferrer"
-                            aria-label="Conversar no WhatsApp">
-                            Conversar no WhatsApp
-                        </a>
-                        <a href="#o-que-e" class="btn btn-secondary">Entender a Doença Falciforme</a>
-                    </div>
-
-                    <p class="microcopy">Orientações gerais e educativas. Em caso de sintomas importantes, procure
-                        atendimento.</p>
-                </div>
-
-                <div class="hero-image">
-                    <img src="src/picture.png" alt="" loading="eager">
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== AUTORIDADE ========== -->
-        <section id="autoridade" class="section section-white">
-            <div class="container">
-                <h2>Doença Falciforme: comum, genética e tratável</h2>
-                <p class="section-intro">A Doença Falciforme é uma condição genética do sangue e está entre as doenças
-                    raras mais frequentes. Com diagnóstico precoce, acompanhamento e prevenção, dá para reduzir crises,
-                    evitar complicações e viver com mais segurança.</p>
-
-                <div class="cards-grid cards-3">
-                    <article class="card">
-                        <div class="card-icon">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" />
-                                <path d="M14 20h12M20 14v12" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-                        <h3>Genética, mas não contagiosa</h3>
-                        <p>Não se pega. É herdada.</p>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-icon">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                                <path d="M20 8v24M12 16l8-8 8 8M12 24l8 8 8-8" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <h3>Acompanhamento muda tudo</h3>
-                        <p>Rotina de cuidados reduz crises.</p>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-icon">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                                <path d="M20 36c8.837 0 16-7.163 16-16S28.837 4 20 4 4 11.163 4 20s7.163 16 16 16z"
-                                    stroke="currentColor" stroke-width="2" />
-                                <path d="M14 20l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <h3>Você pode viver bem</h3>
-                        <p>Com plano de cuidado e apoio.</p>
-                    </article>
-                </div>
-
-                <div class="cta-contextual">
-                    <a href="https://wa.me/SEUNUMERO?text=Oi%20VivaDF%2C%20quero%20saber%20mais%20sobre%20Doen%C3%A7a%20Falciforme"
-                        class="btn btn-cta" target="_blank" rel="noopener noreferrer">Saiba mais sobre a Doença
-                        Falciforme</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== O QUE É ========== -->
-        <section id="o-que-e" class="section">
-            <div class="container">
-                <h2>O que é Doença Falciforme?</h2>
-                <p class="section-text">Na Doença Falciforme, parte das células do sangue pode mudar de formato e
-                    circular com mais dificuldade. Isso pode reduzir o transporte de oxigênio e, em alguns momentos,
-                    causar bloqueios em vasos menores — o que gera dor e outros sintomas.</p>
-
-                <div class="highlight-box">
-                    <h3>Traço x Doença</h3>
-                    <ul>
-                        <li><strong>Traço falciforme:</strong> geralmente não causa sintomas como a doença, mas pode ser
-                            transmitido.</li>
-                        <li><strong>Doença falciforme:</strong> ocorre quando a pessoa herda a alteração genética dos
-                            dois lados da família.</li>
-                    </ul>
-                </div>
-
-                <p class="section-closing">Entender como o seu corpo funciona é o primeiro passo para viver melhor com a
-                    condição.</p>
-
-                <div class="cta-contextual">
-                    <a href="https://wa.me/SEUNUMERO?text=Oi%20VivaDF%2C%20quero%20saber%20mais%20sobre%20as%20Manifesta%C3%A7%C3%B5es"
-                        class="btn btn-cta" target="_blank" rel="noopener noreferrer">Saiba mais sobre as
-                        Manifestações</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== MANIFESTAÇÕES ========== -->
-        <section id="manifestacoes" class="section section-white">
-            <div class="container">
-                <h2>Como a Doença Falciforme pode se manifestar</h2>
-                <p class="section-intro">Cada pessoa vive a condição de um jeito. Algumas têm poucas crises; outras
-                    precisam de mais suporte. O importante é ter acompanhamento e reconhecer sinais.</p>
-
-                <ul class="bullet-list">
-                    <li>Episódios de dor (crises)</li>
-                    <li>Cansaço/anemia</li>
-                    <li>Infecções mais frequentes</li>
-                    <li>Icterícia (olhos/pele amarelados) em alguns casos</li>
-                    <li>Inchaço doloroso em mãos/pés na infância (em alguns casos)</li>
-                </ul>
-
-                <p class="microcopy-inline">Você não precisa "aguentar no limite". Dor forte merece atenção.</p>
-
-                <div class="cta-contextual">
-                    <a href="https://wa.me/SEUNUMERO?text=Oi%20VivaDF%2C%20quero%20saber%20mais%20sobre%20Viver%20Bem"
-                        class="btn btn-cta" target="_blank" rel="noopener noreferrer">Saiba mais sobre Viver Bem</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== VIVER BEM ========== -->
-        <section id="viver-bem" class="section">
-            <div class="container">
-                <h2>Você pode viver bem com Doença Falciforme</h2>
-                <p class="section-intro">Viver bem não significa "nunca ter desafios". Significa ter estratégias, apoio
-                    e um plano. Com cuidado contínuo, muitas pessoas estudam, trabalham, viajam, praticam atividades
-                    físicas com orientação e constroem uma vida completa.</p>
-
-                <div class="manifesto">
-                    <p>Você é maior do que a condição.</p>
-                    <p>Informação reduz medo.</p>
-                    <p>Cuidado consistente constrói liberdade.</p>
-                </div>
-
-                <h3 class="cards-title">O que ajuda de verdade</h3>
-                <div class="cards-grid cards-4">
-                    <article class="card card-small">
-                        <div class="card-icon-small">💧</div>
-                        <h4>Rotina de hidratação</h4>
-                    </article>
-                    <article class="card card-small">
-                        <div class="card-icon-small">🌙</div>
-                        <h4>Sono e recuperação</h4>
-                    </article>
-                    <article class="card card-small">
-                        <div class="card-icon-small">📋</div>
-                        <h4>Acompanhamento e exames</h4>
-                    </article>
-                    <article class="card card-small">
-                        <div class="card-icon-small">🤝</div>
-                        <h4>Rede de apoio e saúde emocional</h4>
-                    </article>
-                </div>
-
-                <div class="cta-contextual">
-                    <a href="https://wa.me/SEUNUMERO?text=Oi%20VivaDF%2C%20quero%20saber%20mais%20sobre%20Cuidados"
-                        class="btn btn-cta" target="_blank" rel="noopener noreferrer">Conheça o seu plano de
-                        cuidados</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== CUIDADOS ========== -->
-        <section id="cuidados" class="section section-white">
-            <div class="container">
-                <h2>Cuidados simples que ajudam muito</h2>
-                <p class="section-intro">Pequenos hábitos têm grande impacto. Nada aqui é sobre "parar de viver" — é
-                    sobre viver com mais segurança.</p>
-
-                <ul class="checklist">
-                    <li>
-                        <span class="check-icon" aria-hidden="true">✓</span>
-                        Hidrate-se ao longo do dia
-                    </li>
-                    <li>
-                        <span class="check-icon" aria-hidden="true">✓</span>
-                        Evite extremos de frio/calor quando possível
-                    </li>
-                    <li>
-                        <span class="check-icon" aria-hidden="true">✓</span>
-                        Vacinas e prevenção de infecções em dia
-                    </li>
-                    <li>
-                        <span class="check-icon" aria-hidden="true">✓</span>
-                        Alimentação equilibrada e rotina saudável
-                    </li>
-                    <li>
-                        <span class="check-icon" aria-hidden="true">✓</span>
-                        Atividade física com orientação (moderada, respeitando o corpo)
-                    </li>
-                    <li>
-                        <span class="check-icon" aria-hidden="true">✓</span>
-                        Acompanhamento regular e plano de ação para crises
-                    </li>
-                </ul>
-
-                <div class="cta-contextual">
-                    <a href="https://wa.me/SEUNUMERO?text=Oi%20VivaDF%2C%20quero%20um%20plano%20de%20cuidados"
-                        class="btn btn-cta" target="_blank" rel="noopener noreferrer"
-                        aria-label="Quero um plano de cuidados no WhatsApp">
-                        Quero um plano de cuidados no WhatsApp
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== ASSISTÊNCIA ========== -->
-        <section id="assistencia" class="section">
-            <div class="container">
-                <h2>Sua assistente digital para o dia a dia</h2>
-                <p class="section-intro">O VivaDF é mais do que informação — é um apoio constante. Nossa assistente por
-                    WhatsApp ajuda você a navegar sua rotina com a Doença Falciforme, oferecendo orientação prática e
-                    acolhimento sempre que precisar, 100% gratuito.</p>
-
-                <div class="cards-grid cards-3">
-                    <article class="card">
-                        <div class="card-icon">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                                <path d="M20 4C11.163 4 4 11.163 4 20s7.163 16 16 16 16-7.163 16-16S28.837 4 20 4z"
-                                    stroke="currentColor" stroke-width="2" />
-                                <path d="M12 20l6-6v4h10v4H18v4l-6-6z" fill="currentColor" />
-                            </svg>
-                        </div>
-                        <h3>Localização de hospitais</h3>
-                        <p>Encontre centros de referência e hospitais próximos preparados para atender DF.</p>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-icon">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                                <rect x="6" y="8" width="28" height="24" rx="3" stroke="currentColor"
-                                    stroke-width="2" />
-                                <path d="M6 16h28M14 8v-4M26 8v-4" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-                        <h3>Diário de crises e lembretes</h3>
-                        <p>Registre episódios, acompanhe padrões e receba lembretes de medicação e hidratação.</p>
-                    </article>
-
-                    <article class="card">
-                        <div class="card-icon">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-                                <path d="M20 36c8.837 0 16-7.163 16-16S28.837 4 20 4 4 11.163 4 20s7.163 16 16 16z"
-                                    stroke="currentColor" stroke-width="2" />
-                                <path d="M20 12v10l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                            </svg>
-                        </div>
-                        <h3>S.O.S Emergência</h3>
-                        <p>Protocolo de urgência guiado por dor e orientação imediata em momentos críticos.</p>
-                    </article>
-                </div>
-
-                <div class="cards-grid cards-4" style="margin-top: var(--spacing-lg);">
-                    <article class="card card-small">
-                        <div class="card-icon-small">📚</div>
-                        <h4>Conteúdo educacional</h4>
-                    </article>
-                    <article class="card card-small">
-                        <div class="card-icon-small">💚</div>
-                        <h4>Suporte emocional</h4>
-                    </article>
-                    <article class="card card-small">
-                        <div class="card-icon-small">⚖️</div>
-                        <h4>Direitos do paciente</h4>
-                    </article>
-                    <article class="card card-small">
-                        <div class="card-icon-small">🩺</div>
-                        <h4>Rede de especialistas</h4>
-                    </article>
-                </div>
-
-                <div class="manifesto" style="margin-top: var(--spacing-xl);">
-                    <p>Acolhimento 24h gratuito. Informação confiável. Apoio real.</p>
-                </div>
-
-                <div class="cta-contextual">
-                    <a href="https://wa.me/SEUNUMERO?text=Oi%20VivaDF%2C%20quero%20conhecer%20a%20assist%C3%AAncia"
-                        class="btn btn-cta btn-large" target="_blank" rel="noopener noreferrer"
-                        aria-label="Conversar com a assistente">
-                        Conversar com a assistente
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== ALERTA ========== -->
-        <section id="alerta" class="section section-alert">
-            <div class="container">
-                <h2>Quando procurar atendimento imediatamente</h2>
-                <p class="section-intro">Alguns sinais pedem avaliação rápida. Sua segurança deve estar em primeiro
-                    lugar. Estes são os principais sinais de alerta para procurar atendimento:</p>
-
-                <ul class="alert-list">
-                    <li>Febre</li>
-                    <li>Dor intensa fora do seu padrão ou que não melhora</li>
-                    <li>Falta de ar, dor no peito, desmaio</li>
-                    <li>Fraqueza súbita, alteração neurológica, confusão</li>
-                    <li>Qualquer sintoma que te assuste</li>
-                </ul>
-
-                <p class="support-phrase">Você não está exagerando. Procurar ajuda cedo é cuidado.</p>
-
-                <div class="cta-contextual">
-                    <a href="https://wa.me/SEUNUMERO?text=Oi%20VivaDF%2C%20quero%20saber%20mais%20sobre%20Sinais%20de%20Alerta"
-                        class="btn btn-cta" target="_blank" rel="noopener noreferrer">Saiba mais sobre Sinais de
-                        Alerta</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== TRATAMENTO ========== -->
-        <section id="tratamento" class="section section-white">
-            <div class="container">
-                <h2>O tratamento é individual — e funciona melhor com constância</h2>
-                <p class="section-text">O cuidado pode incluir acompanhamento especializado, prevenção, controle de
-                    sintomas e, em alguns casos, medicamentos e outros recursos definidos pela equipe de saúde. O melhor
-                    caminho é ter um plano claro e revisá-lo ao longo do tempo.</p>
-                <p class="section-subtext">Cada pessoa tem uma história e um plano. O que importa é não caminhar
-                    sozinho.</p>
-
-                <div class="cta-contextual">
-                    <a href="https://wa.me/SEUNUMERO?text=Oi%20VivaDF%2C%20quero%20saber%20mais%20sobre%20Tratamento"
-                        class="btn btn-cta" target="_blank" rel="noopener noreferrer">Saiba mais sobre Tratamento</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== VIDA REAL ========== -->
-        <section id="vida-real" class="section">
-            <div class="container">
-                <h2>Vida real com Doença Falciforme</h2>
-
-                <div class="testimonial-grid">
-                    <blockquote class="testimonial-card">
-                        <p>"Aprendi a reconhecer meus sinais e agir cedo."</p>
-                    </blockquote>
-                    <blockquote class="testimonial-card">
-                        <p>"Com rotina e apoio, minha vida segue."</p>
-                    </blockquote>
-                    <blockquote class="testimonial-card">
-                        <p>"Eu me cuido — e continuo vivendo meus planos."</p>
-                    </blockquote>
-                </div>
-
-                <div class="cta-contextual">
-                    <a href="https://wa.me/SEUNUMERO?text=Oi%20VivaDF%2C%20quero%20compartilhar%20minha%20hist%C3%B3ria"
-                        class="btn btn-cta" target="_blank" rel="noopener noreferrer">Saiba mais sobre Vida Real</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== FAQ ========== -->
-        <section id="faq" class="section section-white">
-            <div class="container">
-                <h2>Perguntas frequentes</h2>
-
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <button class="accordion-header" aria-expanded="false">
-                            <span>Doença Falciforme é contagiosa?</span>
-                            <span class="accordion-icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Não. A Doença Falciforme é uma condição genética, herdada dos pais. Não é transmitida por
-                                contato, ar, água ou qualquer outro meio.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header" aria-expanded="false">
-                            <span>O que pode desencadear uma crise?</span>
-                            <span class="accordion-icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Alguns fatores que podem contribuir: desidratação, temperaturas extremas (frio ou calor
-                                intenso), infecções, estresse físico ou emocional intenso, e esforço físico excessivo
-                                sem preparo. Cada pessoa pode ter gatilhos diferentes — conhecer os seus ajuda a
-                                prevenir.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header" aria-expanded="false">
-                            <span>Posso fazer exercício físico?</span>
-                            <span class="accordion-icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Sim, atividade física pode fazer parte da rotina, desde que seja adequada à sua condição
-                                e com orientação profissional. Exercícios moderados, boa hidratação e respeitar os
-                                limites do corpo são fundamentais. Converse com sua equipe de saúde para um plano
-                                personalizado.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header" aria-expanded="false">
-                            <span>Como lidar com a dor no dia a dia?</span>
-                            <span class="accordion-icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Ter um plano de manejo de dor com sua equipe de saúde é essencial. Isso pode incluir
-                                identificar sinais precoces, saber quando usar medicações prescritas, aplicar calor
-                                local, manter-se hidratado e reconhecer quando buscar atendimento. O chatbot orienta com
-                                informação educativa e apoio. Para decisões clínicas e emergências, procure sua equipe
-                                de saúde ou atendimento.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header" aria-expanded="false">
-                            <span>Como explicar a condição para família/trabalho?</span>
-                            <span class="accordion-icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>Ser claro e objetivo ajuda. Você pode explicar que é uma condição genética do sangue que
-                                requer alguns cuidados, e que com acompanhamento você leva uma vida normal. Definir o
-                                que você precisa (pausas, hidratação, flexibilidade em alguns dias) facilita a
-                                compreensão dos outros.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item">
-                        <button class="accordion-header" aria-expanded="false">
-                            <span>O que o chatbot pode me ajudar a entender?</span>
-                            <span class="accordion-icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="accordion-content">
-                            <p>O chatbot orienta com informação educativa e apoio. Pode ajudar a tirar dúvidas gerais
-                                sobre a condição, cuidados do dia a dia, quando buscar atendimento, e organizar
-                                informações. Para decisões clínicas e emergências, procure sua equipe de saúde ou
-                                atendimento.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== PARCEIROS ========== -->
-        <section id="parceiros" class="section section-white">
-            <div class="container">
-                <h2>Nossos Parceiros</h2>
-                <p class="section-intro">Empresas e organizações que apoiam a causa da Doença Falciforme.</p>
-                <div class="parceiros-grid" id="parceiros-logos">
-                    <!-- Logos serão carregados dinamicamente via JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <!-- ========== CTA FINAL ========== -->
-        <section id="whatsapp" class="section section-cta-final">
-            <div class="container">
-                <h2>Fale com a VivaDF no WhatsApp</h2>
-                <p class="section-intro">Tire dúvidas, receba orientações e organize seus próximos passos com mais
-                    clareza e tranquilidade.</p>
-
-                <a href="https://wa.me/SEUNUMERO?text=Oi%20VivaDF%2C%20quero%20tirar%20d%C3%BAvidas%20sobre%20Doen%C3%A7a%20Falciforme"
-                    class="btn btn-cta btn-large" target="_blank" rel="noopener noreferrer"
-                    aria-label="Conversar no WhatsApp agora">
-                    Conversar no WhatsApp agora
-                </a>
-
-                <p class="microcopy">Atendimento educativo por IA. Não substitui consulta médica.</p>
-            </div>
-        </section>
-    </main>
-
-    <!-- ========== FOOTER ========== -->
-    <footer id="footer" class="footer">
-        <div class="container">
-            <div class="footer-transparency">
-                <h3>Transparência</h3>
-                <p>Conteúdo educativo baseado em referências médicas e materiais de saúde pública. Sempre converse com
-                    sua equipe de saúde para condutas individuais.</p>
-            </div>
-
-            <div class="footer-references">
-                <h4>Referências recomendadas</h4>
-                <ul>
-                    <li>Ministério da Saúde (materiais sobre Doença Falciforme)</li>
-                    <li>Organização Mundial da Saúde (Sickle cell disease)</li>
-                    <li>Manual MSD (informações clínicas)</li>
-                    <li>NIH / MedlinePlus (informações para pacientes)</li>
-                </ul>
-            </div>
-
-            <div class="footer-copy">
-                <p>&copy; 2025 VivaDF. Todos os direitos reservados.</p>
-            </div>
+    <!-- ========== PARCEIROS ========== -->
+    <section id="parceiros" class="section section-white">
+      <div class="container">
+        <h2>Nossos Parceiros</h2>
+        <p class="section-intro">Empresas e organizações que apoiam a causa da Doença Falciforme.</p>
+        <div class="parceiros-grid" id="parceiros-logos">
+          <!-- Logos serão carregados dinamicamente via JavaScript -->
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <!-- ========== BOTÃO FLUTUANTE WHATSAPP ========== -->
-    <a href="https://wa.me/SEUNUMERO?text=Oi%20VivaDF%2C%20quero%20tirar%20d%C3%BAvidas%20sobre%20Doen%C3%A7a%20Falciforme"
-        class="fab-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
-        <svg viewBox="0 0 32 32" width="32" height="32" fill="currentColor" aria-hidden="true">
-            <path
-                d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 32l6.826-2.186A15.91 15.91 0 0016.004 32C24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.338 22.594c-.39 1.1-1.932 2.012-3.172 2.278-.848.18-1.956.324-5.684-1.222-4.772-1.978-7.838-6.836-8.076-7.152-.228-.316-1.912-2.546-1.912-4.856 0-2.31 1.212-3.448 1.642-3.918.39-.428 1.026-.604 1.634-.604.198 0 .374.01.534.018.43.018.646.044.93.718.354.84 1.218 2.966 1.324 3.182.108.216.18.468.036.75-.134.292-.2.472-.4.728-.198.256-.418.572-.596.768-.198.228-.404.474-.174.93.23.446.102.18 1.792 2.738 1.174 1.778 2.132 2.328 2.436 2.582.304.256.482.214.66.128.188-.094.796-.464 1.008-.932s.424-.862.59-.862c.166 0 1.39.328 1.628.388.238.06.396.09.454.138.058.048.058.276-.082.684z" />
-        </svg>
-    </a>
+    <!-- ========== CTA FINAL ========== -->
+    <section id="whatsapp" class="section section-cta-final">
+      <div class="container">
+        <h2>Fale com a VivaDF no WhatsApp</h2>
+        <p class="section-intro">Tire dúvidas, receba orientações e organize seus próximos passos com mais
+          clareza e tranquilidade.</p>
 
-    <script src="script.js"></script>
+        <a href="https://wa.me/0"
+          data-wa-text="Oi VivaDF, quero tirar dúvidas sobre Doença Falciforme"
+          class="btn btn-cta btn-large" target="_blank" rel="noopener noreferrer"
+          aria-label="Conversar no WhatsApp agora">
+          Conversar no WhatsApp agora
+        </a>
+
+        <p class="microcopy">Atendimento educativo por IA. Não substitui consulta médica.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer-transparency">
+        <h3>Transparência</h3>
+        <p>Conteúdo educativo baseado em referências médicas e materiais de saúde pública. Sempre converse com
+          sua equipe de saúde para condutas individuais.</p>
+      </div>
+
+      <div class="footer-references">
+        <h4>Referências recomendadas</h4>
+        <ul>
+          <li>Ministério da Saúde (materiais sobre Doença Falciforme)</li>
+          <li>Organização Mundial da Saúde (Sickle cell disease)</li>
+          <li>Manual MSD (informações clínicas)</li>
+          <li>NIH / MedlinePlus (informações para pacientes)</li>
+        </ul>
+      </div>
+
+      <div class="footer-copy">
+        <p>&copy; 2025 VivaDF. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== BOTÃO FLUTUANTE WHATSAPP ========== -->
+  <a href="https://wa.me/0"
+    data-wa-text="Oi VivaDF, quero tirar dúvidas sobre Doença Falciforme"
+    class="fab-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
+    <svg viewBox="0 0 32 32" width="32" height="32" fill="currentColor" aria-hidden="true">
+      <path
+        d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 32l6.826-2.186A15.91 15.91 0 0016.004 32C24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.338 22.594c-.39 1.1-1.932 2.012-3.172 2.278-.848.18-1.956.324-5.684-1.222-4.772-1.978-7.838-6.836-8.076-7.152-.228-.316-1.912-2.546-1.912-4.856 0-2.31 1.212-3.448 1.642-3.918.39-.428 1.026-.604 1.634-.604.198 0 .374.01.534.018.43.018.646.044.93.718.354.84 1.218 2.966 1.324 3.182.108.216.18.468.036.75-.134.292-.2.472-.4.728-.198.256-.418.572-.596.768-.198.228-.404.474-.174.93.23.446.102.18 1.792 2.738 1.174 1.778 2.132 2.328 2.436 2.582.304.256.482.214.66.128.188-.094.796-.464 1.008-.932s.424-.862.59-.862c.166 0 1.39.328 1.628.388.238.06.396.09.454.138.058.048.058.276-.082.684z" />
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
