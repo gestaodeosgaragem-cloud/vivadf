@@ -5,7 +5,7 @@
 
 // ===== CONFIGURAÇÃO DO WHATSAPP =====
 // Use apenas dígitos (DDI + DDD + número). Ex: 5511911195108
-const WHATSAPP_NUMBER = '5511911195108';
+const WHATSAPP_NUMBER = '5511952136954';
 
 // Mensagem padrão (usada quando o link não tem data-wa-text e não tem text=)
 const WHATSAPP_DEFAULT_TEXT = 'Oi VivaDF, quero tirar dúvidas sobre Doença Falciforme';
