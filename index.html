@@ -14,7 +14,112 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Leaflet (Mapa) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Estilos mínimos do mapa direto no HTML (pode mover pro styles.css se quiser) -->
+    <style>
+        /* ===== Hemocentros (Mapa) ===== */
+        .map-ui {
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            gap: 16px;
+            align-items: start;
+        }
+
+        .map-controls {
+            background: var(--white, #fff);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 16px;
+            padding: 14px;
+        }
+
+        .map-row {
+            display: grid;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .map-label {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .map-input {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.14);
+            outline: none;
+        }
+
+        .map-frame {
+            background: var(--white, #fff);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .hemo-map {
+            width: 100%;
+            height: 460px;
+        }
+
+        .hemo-list {
+            display: grid;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .hemo-item {
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 14px;
+            padding: 12px;
+            cursor: pointer;
+            transition: transform .08s ease, box-shadow .12s ease;
+        }
+
+        .hemo-item:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .hemo-title {
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .hemo-meta {
+            font-size: 13px;
+            opacity: .85;
+            line-height: 1.35;
+        }
+
+        .hemo-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+        }
+
+        .hemo-link {
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 980px) {
+            .map-ui {
+                grid-template-columns: 1fr;
+            }
+
+            .hemo-map {
+                height: 380px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -39,6 +144,7 @@
                     <li><a href="#assistencia">Seu Assistente Virtual</a></li>
                     <li><a href="#alerta">Sinais de alerta</a></li>
                     <li><a href="#faq">Perguntas</a></li>
+                    <li><a href="#hemocentros">Hemocentros</a></li>
                 </ul>
 
                 <a href="https://wa.me/0" data-wa-text="Oi GuiaFalciforme, quero tirar dúvidas sobre Doença Falciforme"
@@ -82,7 +188,7 @@
             </div>
         </section>
 
-                <!-- ========== ASSISTÊNCIA ========== -->
+        <!-- ========== ASSISTÊNCIA ========== -->
         <section id="assistencia" class="section">
             <div class="container">
                 <h2>Seu assistente digital 100% gratuito para o dia a dia</h2>
@@ -482,7 +588,7 @@
                     <div class="accordion-item">
                         <button class="accordion-header" aria-expanded="false">
                             <span>Como explicar a condição para família/trabalho?</span>
-                            <span class="accordion-icon" aria-hidden="true"></span>
+                            <span class="accordion-icon" aria-expanded="false"></span>
                         </button>
                         <div class="accordion-content">
                             <p>Ser claro e objetivo ajuda. Você pode explicar que é uma condição genética do sangue que
@@ -515,6 +621,38 @@
                 <p class="section-intro">Empresas e organizações que apoiam a causa da Doença Falciforme.</p>
                 <div class="parceiros-grid" id="parceiros-logos">
                     <!-- Logos serão carregados dinamicamente via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== HEMOCENTROS (MAPA) - INSERIDO ANTES DO CTA FINAL ========== -->
+        <section id="hemocentros" class="section section-white">
+            <div class="container">
+                <h2>Hemocentros próximos de você</h2>
+                <p class="section-intro">
+                    Use sua localização para encontrar pontos de doação/banco de sangue perto de você.
+                    Se não permitir localização, o mapa abre em uma visão geral.
+                </p>
+
+                <div class="map-ui">
+                    <div class="map-controls">
+                        <div class="map-row">
+                            <label for="hemo-radius" class="map-label">Raio (km)</label>
+                            <input id="hemo-radius" class="map-input" type="number" min="1" max="50" value="10">
+                        </div>
+
+                        <button id="hemo-btn" class="btn btn-cta" type="button">
+                            Usar minha localização
+                        </button>
+
+                        <p id="hemo-status" class="microcopy" style="margin-top: 10px;"></p>
+
+                        <div id="hemo-list" class="hemo-list" aria-live="polite"></div>
+                    </div>
+
+                    <div class="map-frame">
+                        <div id="hemo-map" class="hemo-map" role="region" aria-label="Mapa de hemocentros"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -571,7 +709,204 @@
         </svg>
     </a>
 
+    <!-- Leaflet JS (Mapa) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
     <script src="script.js"></script>
+
+    <!-- Script do mapa direto no HTML (pode mover pro script.js se quiser) -->
+    <script>
+        // ===== Hemocentros próximos (Leaflet + Overpass/OSM) =====
+        (function initHemocentrosFeature() {
+            function $(id) { return document.getElementById(id); }
+
+            const mapEl = $('hemo-map');
+            if (!mapEl) return;
+
+            const statusEl = $('hemo-status');
+            const listEl = $('hemo-list');
+            const radiusEl = $('hemo-radius');
+            const btnEl = $('hemo-btn');
+
+            const overpassEndpoint = 'https://overpass-api.de/api/interpreter';
+
+            function setStatus(msg, isError = false) {
+                statusEl.textContent = msg || '';
+                statusEl.style.color = isError ? '#b00020' : '';
+            }
+
+            function escapeHtml(s = '') {
+                return String(s).replace(/[&<>"']/g, m => ({
+                    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+                }[m]));
+            }
+
+            function haversineKm(aLat, aLon, bLat, bLon) {
+                const R = 6371;
+                const dLat = (bLat - aLat) * Math.PI / 180;
+                const dLon = (bLon - aLon) * Math.PI / 180;
+                const sa =
+                    Math.sin(dLat / 2) ** 2 +
+                    Math.cos(aLat * Math.PI / 180) *
+                    Math.cos(bLat * Math.PI / 180) *
+                    Math.sin(dLon / 2) ** 2;
+                return 2 * R * Math.asin(Math.sqrt(sa));
+            }
+
+            function fmtAddr(tags) {
+                const parts = [
+                    tags['addr:street'],
+                    tags['addr:housenumber'],
+                    tags['addr:suburb'],
+                    tags['addr:city'],
+                    tags['addr:state'],
+                    tags['addr:postcode'],
+                ].filter(Boolean);
+                return parts.join(', ');
+            }
+
+            async function fetchHemocentros(lat, lon, radiusMeters) {
+                const q = `
+[out:json][timeout:25];
+(
+  nwr(around:${radiusMeters}, ${lat}, ${lon})["healthcare"="blood_donation"];
+  nwr(around:${radiusMeters}, ${lat}, ${lon})["healthcare"="blood_bank"];
+  nwr(around:${radiusMeters}, ${lat}, ${lon})["amenity"="blood_bank"];
+);
+out center tags;
+                `.trim();
+
+                const res = await fetch(overpassEndpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+                    body: 'data=' + encodeURIComponent(q),
+                });
+
+                if (!res.ok) {
+                    const t = await res.text().catch(() => '');
+                    throw new Error(`Overpass HTTP ${res.status} ${t ? '- ' + t.slice(0, 120) : ''}`);
+                }
+                return res.json();
+            }
+
+            // --- mapa base ---
+            const map = L.map('hemo-map', { scrollWheelZoom: true }).setView([-14.2350, -51.9253], 4);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; OpenStreetMap'
+            }).addTo(map);
+
+            const markersLayer = L.layerGroup().addTo(map);
+            let userMarker = null;
+
+            function clearResults() {
+                markersLayer.clearLayers();
+                listEl.innerHTML = '';
+            }
+
+            function addListItem(item, onClick) {
+                const tags = item.tags || {};
+                const name = tags.name || tags.operator || 'Hemocentro / Doação de sangue';
+                const addr = fmtAddr(tags);
+                const phone = tags.phone || tags['contact:phone'];
+                const site = tags.website || tags['contact:website'];
+
+                const gmaps = `https://www.google.com/maps?q=${item.lat},${item.lon}`;
+
+                const div = document.createElement('div');
+                div.className = 'hemo-item';
+                div.innerHTML = `
+          <div class="hemo-title">${escapeHtml(name)}</div>
+          ${addr ? `<div class="hemo-meta">${escapeHtml(addr)}</div>` : ''}
+          ${phone ? `<div class="hemo-meta">📞 ${escapeHtml(phone)}</div>` : ''}
+          ${site ? `<div class="hemo-meta">🌐 ${escapeHtml(site)}</div>` : ''}
+          <div class="hemo-meta">📍 ${escapeHtml(item.km.toFixed(1))} km</div>
+          <div class="hemo-actions">
+            <a class="hemo-link" href="${gmaps}" target="_blank" rel="noopener noreferrer">Abrir no Google Maps</a>
+          </div>
+        `;
+                div.addEventListener('click', onClick);
+                listEl.appendChild(div);
+            }
+
+            async function runGeoSearch() {
+                clearResults();
+
+                if (!navigator.geolocation) {
+                    setStatus('Seu navegador não suporta geolocalização.', true);
+                    return;
+                }
+
+                const radiusKm = Math.max(1, Math.min(50, Number(radiusEl.value || 10)));
+                const radiusMeters = Math.round(radiusKm * 1000);
+
+                setStatus('Pedindo permissão de localização...');
+                navigator.geolocation.getCurrentPosition(async (pos) => {
+                    try {
+                        const lat = pos.coords.latitude;
+                        const lon = pos.coords.longitude;
+
+                        setStatus(`Buscando hemocentros em ${radiusKm} km...`);
+
+                        map.setView([lat, lon], 13);
+
+                        if (userMarker) userMarker.remove();
+                        userMarker = L.marker([lat, lon]).addTo(map).bindPopup('Você está aqui').openPopup();
+
+                        const data = await fetchHemocentros(lat, lon, radiusMeters);
+
+                        const items = (data.elements || [])
+                            .map(el => {
+                                const pLat = el.type === 'node' ? el.lat : (el.center && el.center.lat);
+                                const pLon = el.type === 'node' ? el.lon : (el.center && el.center.lon);
+                                if (pLat == null || pLon == null) return null;
+
+                                const tags = el.tags || {};
+                                const km = haversineKm(lat, lon, pLat, pLon);
+                                return { lat: pLat, lon: pLon, tags, km };
+                            })
+                            .filter(Boolean)
+                            .sort((a, b) => a.km - b.km);
+
+                        if (!items.length) {
+                            setStatus('Nenhum resultado encontrado nesse raio. Tente aumentar o raio.', true);
+                            return;
+                        }
+
+                        setStatus(`${items.length} resultado(s) encontrado(s).`);
+
+                        items.forEach((it) => {
+                            const name = it.tags.name || it.tags.operator || 'Hemocentro / Doação de sangue';
+                            const addr = fmtAddr(it.tags);
+
+                            const popup = `
+              <div style="font-weight:700; margin-bottom:6px;">${escapeHtml(name)}</div>
+              ${addr ? `<div style="font-size:13px; opacity:.9;">${escapeHtml(addr)}</div>` : ''}
+              ${it.tags.opening_hours ? `<div style="font-size:13px; opacity:.9; margin-top:6px;">⏰ ${escapeHtml(it.tags.opening_hours)}</div>` : ''}
+              <div style="font-size:13px; opacity:.9; margin-top:6px;">📍 ${it.km.toFixed(1)} km</div>
+            `;
+
+                            const m = L.marker([it.lat, it.lon]).addTo(markersLayer).bindPopup(popup);
+
+                            addListItem(it, () => {
+                                map.setView([it.lat, it.lon], 16);
+                                m.openPopup();
+                            });
+                        });
+
+                    } catch (e) {
+                        setStatus('Erro ao buscar dados. Tente novamente em instantes.', true);
+                    }
+                }, (err) => {
+                    setStatus('Não foi possível obter sua localização. (' + err.message + ')', true);
+                }, { enableHighAccuracy: true, timeout: 12000, maximumAge: 30000 });
+            }
+
+            btnEl.addEventListener('click', runGeoSearch);
+
+            setStatus('Clique em “Usar minha localização” para buscar hemocentros próximos.');
+        })();
+    </script>
 </body>
 
 </html>
